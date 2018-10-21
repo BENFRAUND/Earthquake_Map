@@ -11,8 +11,8 @@ function createFeatures(earthquakeData) {
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p>");
     },
     pointToLayer: function (feature, latlng) {
-      return new L.circle(latlng,
-        {radius: feature.properties.mag * 35000,
+      return new L.circleMarker(latlng,
+        {radius: feature.properties.mag * 5,
           fillColor: getColor(feature.properties.mag),
           fillOpacity: .7,
           stroke: true,
@@ -118,12 +118,3 @@ function getColor(d) {
   d > 1   ? '#99FF00' :
             '#00FF00';
 }
-
-// function getRadius(value){
-//   return value*35000;
-// }
-
-// map.on('zoomend', function() {
-//   var currentZoom = map.getZoom();
-//   earthquakes.setRadius(currentZoom);
-// });

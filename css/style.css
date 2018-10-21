@@ -39,6 +39,10 @@ body{
     opacity: 0.7;
 }
 
+.info.legend.leaflet-control {
+    margin-bottom: 100px;
+}
+
 .leaflet-bottom.leaflet-left{
     width: 90%;
   }
